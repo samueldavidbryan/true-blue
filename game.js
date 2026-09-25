@@ -6,7 +6,7 @@
 
 // ---------- 1. SETTINGS (try changing these!) ----------
 
-const GAME_LENGTH = 30;              // how many seconds a game lasts
+const GAME_LENGTH = 45;              // how many seconds a game lasts
 
 const BLUE_THINGS = ["🐟", "🐳", "🐬", "🐋"];      // tap these: +1
 const NOT_BLUE_THINGS = ["🦀", "🐙", "🐡", "🦞"];  // don't tap: -2
