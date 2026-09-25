@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True Blue</title>
+
+  <!-- A fun, rounded font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- All the colors and animations live in style.css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Bubbles floating up in the background (just decoration).
+       Each one gets its own position, size, speed and delay. -->
+  <div class="bubbles">
+    <span class="bubble" style="--x: 5%;  --size: 18px; --speed: 9s;  --delay: 0s;"></span>
+    <span class="bubble" style="--x: 15%; --size: 30px; --speed: 12s; --delay: 3s;"></span>
+    <span class="bubble" style="--x: 28%; --size: 12px; --speed: 7s;  --delay: 1s;"></span>
+    <span class="bubble" style="--x: 40%; --size: 24px; --speed: 11s; --delay: 5s;"></span>
+    <span class="bubble" style="--x: 52%; --size: 16px; --speed: 8s;  --delay: 2s;"></span>
+    <span class="bubble" style="--x: 64%; --size: 34px; --speed: 14s; --delay: 0s;"></span>
+    <span class="bubble" style="--x: 75%; --size: 14px; --speed: 9s;  --delay: 4s;"></span>
+    <span class="bubble" style="--x: 85%; --size: 26px; --speed: 10s; --delay: 6s;"></span>
+    <span class="bubble" style="--x: 94%; --size: 18px; --speed: 8s;  --delay: 1s;"></span>
+  </div>
+
+  <main id="game">
+    <h1 class="title">True Blue</h1>
+
+    <!-- Score and time -->
+    <div class="scoreboard">
+      <div>Score: <span id="score">0</span></div>
+      <div>Best: <span id="best">0</span></div>
+      <div>Time: <span id="time">30</span></div>
+    </div>
+
+    <!-- The bar that shrinks as time runs out -->
+    <div class="timebar">
+      <div id="timebar-fill" class="timebar-fill"></div>
+    </div>
+
+    <!-- The 9 waves. Sea creatures pop up out of these. -->
+    <div class="ocean">
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+      <div class="wave"><div class="creature"></div></div>
+    </div>
+  </main>
+
+  <!-- START SCREEN: shown when the page first loads -->
+  <div id="start-screen" class="screen">
+    <div class="card">
+      <h1 class="title">True Blue</h1>
+      <p class="big">Tap only what's <strong>True Blue!</strong></p>
+
+      <div class="rules">
+        <div class="rule good">
+          <div class="emojis">🐟 🐳 🐬 🐋</div>
+          <div>Tap these! <b>+1</b></div>
+        </div>
+        <div class="rule gold">
+          <div class="emojis">💎</div>
+          <div>Rare! <b>+3</b></div>
+        </div>
+        <div class="rule bad">
+          <div class="emojis">🦀 🐙 🐡 🦞</div>
+          <div>Not blue! <b>−2</b></div>
+        </div>
+      </div>
+
+      <button id="start-button" class="button">Dive In!</button>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN: hidden until the timer runs out -->
+  <div id="over-screen" class="screen hidden">
+    <div class="card">
+      <h2 class="big">Time's up!</h2>
+      <p class="final">You scored <span id="final-score">0</span></p>
+      <p id="new-best" class="new-best hidden">🎉 New best score! 🎉</p>
+      <button id="again-button" class="button">Play Again</button>
+    </div>
+  </div>
+
+  <!-- All the game logic lives in game.js -->
+  <script src="game.js"></script>
+</body>
+</html>
