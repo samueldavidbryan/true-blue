@@ -12,6 +12,10 @@ Sea creatures pop up out of the waves. **Tap only the ones that are true blue!**
 
 You have 30 seconds, and the creatures get faster as your score goes up.
 
+## Why this project exists
+
+I made this to show my nephew, a beginner programmer, how to build and publish a real web app with [Claude Code](https://claude.com/claude-code). We described the game in plain English, and Claude Code wrote the code, set up the GitHub repo and published it to GitHub Pages. Everything is kept simple and heavily commented so a beginner can read every line, understand how it works, and start changing it.
+
 ## How to run it
 
 Double-click `index.html` to open it in your browser. That's it!
